@@ -17,7 +17,7 @@ arg = parser.parse_args()
 
 num_reads = arg.size * arg.coverage
 
-# allocate genome
+# genome array
 genome = []
 for i in range(arg.size):
 	#set all positions to 0
@@ -27,11 +27,9 @@ for i in range(arg.size * arg.coverage):
 	genome.append(0)
 	# choose random positions within the genome
 	rand_pos = random.randint(0, arg.size - 1)
-	if arg.rl == 1:
-		genome[rand_pos] += 1
-	else:
-		for curr_pos in range(rand_pos, rand_pos + arg.rl - 1):
-			genome[curr_pos] += 1
+	# add 1 to each position in range of the read length
+	for curr_pos in range(rand_pos, rand_pos + arg.rl):
+		genome[curr_pos] += 1
 
 thresh_counts = 0
 for i in range(arg.size):
