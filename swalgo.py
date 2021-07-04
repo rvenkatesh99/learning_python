@@ -65,6 +65,7 @@ display(trace)
 seq1_align = []
 seq2_align = []
 
+# Traceback
 while score[max_i][max_j] > 0:
     print(max_i, max_j)
     if trace[max_i][max_j] == 'd':
