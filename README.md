@@ -1,4 +1,4 @@
-# learning_python
+# Sequence Alignment
 Directory for Sequence Analysis class. Jan 9 2021
 
 ## Algorithms:
